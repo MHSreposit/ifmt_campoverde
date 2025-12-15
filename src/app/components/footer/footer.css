@@ -1,29 +1,65 @@
 ﻿.footer {
-  background-color: #222;
-  color: #fff;
-  padding: 20px 40px;
+  background-color: #1c201c;
+  color: #ffffff;
+  padding: 30px 40px 20px;
   font-size: 14px;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.contato h4 {
-  margin-bottom: 8px;
-  font-size: 16px;
-  color: #f0c040;
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.contato p,
-.direitos p {
-  margin: 4px 0;
+.footer-col p {
+  margin: 6px 0;
+  color: #d1d1d1;
+  line-height: 1.6;
 }
 
-.direitos {
+/* Linha inferior (bem Bridge) */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.footer-item {
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
 }
+
+.footer-item img {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  flex-shrink: 0;
+
+  /* 🔵 deixa o ícone azul */
+  filter: invert(67%) sepia(92%) saturate(1200%) hue-rotate(95deg) brightness(115%) contrast(100%);
+}
+

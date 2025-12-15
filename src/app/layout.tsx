@@ -3,9 +3,9 @@ import { Header } from "./components/header";
 import { Footer } from "./components/footer/footer";
 
 export const metadata = {
-  title: "MHS at School",
+  title: "IFMT Campo Verde",
   icons: {
-    icon: "/logomhs.svg",
+    icon: "/ifmt_logo.svg",
   },
 };
 

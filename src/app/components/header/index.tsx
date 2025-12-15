@@ -9,17 +9,29 @@ export function Header() {
   return (
     <header className="header">
       <Link href="/">
-        <img src="/logomhs.png" alt="Logo MHS" className="logo-img" />
-        <h1 className="logo-text">MHS at School</h1>
+        <img src="/ifmt_logo.png" alt="Logo IFMT" className="logo-img" />
+        <h1 className="logo-text">IFMT - Campo Verde</h1>
       </Link>
 
       <nav className={`menu ${menuAberto ? "ativo" : ""}`}>
         <ul>
           <li>
-            <Link href="/aulas">AULAS</Link>
+            <Link href="/aulas">Home</Link>
           </li>
           <li>
-            <Link href="/contatos">Contatos</Link>
+            <Link href="/aulas">Blog</Link>
+          </li>
+          <li>
+            <Link href="/contatos">Quem somos</Link>
+          </li>
+          <li>
+            <Link href="/contatos">Portifólio</Link>
+          </li>
+          <li>
+            <Link href="/contatos">Trabalhe conosco</Link>
+          </li>
+          <li>
+            <Link href="/contatos">Trabalhos publicados</Link>
           </li>
         </ul>
       </nav>
