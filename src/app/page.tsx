@@ -2,6 +2,7 @@ import { Metadata } from "next"
 
 // app/page.tsx ou pages/index.tsx
 import { Carrossel } from "./components/carousel/carousel";
+import { SpriteAnimIfmt }  from "./components/anime_ifmt/page";
 
 
 export const metadata: Metadata = {
@@ -18,8 +19,15 @@ export const metadata: Metadata = {
 
 export default function Home(){
   return (
-    <div>
+    <div> {/* ATENÇÃO - NÃO DEIXAR ULTIMA LINHA DA SPRITE INCOMPLETA */}
       <h3>Home Page - IFMT</h3>
+        <SpriteAnimIfmt
+        src="/sprites/ifmt.png"
+        frameWidth={209}
+        frameHeight={210}
+        totalFrames={213}
+        fps={24}
+      />
       {/* <Carrossel />  Só aparece aqui */}
     </div>
   )
