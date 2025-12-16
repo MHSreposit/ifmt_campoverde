@@ -20,3 +20,43 @@ body {
   padding-left: 100px;
   padding-right: 100px;
 }
+
+.ao_lado {
+  display: flex;
+  flex-direction: row;       /* linha horizontal por padrão */
+  align-items: center;       /* verticalmente centralizados */
+  justify-content: center;   /* horizontalmente centralizados no espaço disponível */
+  gap: 2rem;                 /* espaço entre texto e spritesheet */
+  flex-wrap: wrap;           /* permite quebrar em mobile */
+}
+
+/* Container principal com duas colunas */
+.ao_lado {
+  display: flex;
+  flex-direction: row;       /* colunas lado a lado */
+  justify-content: center;   /* centraliza o bloco na tela */
+  align-items: stretch;      /* colunas ocupam altura máxima do container */
+  gap: 2rem;
+  flex-wrap: wrap;           /* responsivo: quebra em telas pequenas */
+  padding: 2rem;
+}
+
+/* Coluna do texto */
+.col-texto {
+  flex: 1 1 300px;           /* cresce, encolhe, largura mínima 300px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centraliza verticalmente dentro da coluna */
+  align-items: flex-start;   /* mantém texto à esquerda */
+}
+
+/* Coluna da imagem */
+.col-image {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;   /* centraliza horizontalmente */
+  align-items: center;       /* centraliza verticalmente */
+}
+
+
+

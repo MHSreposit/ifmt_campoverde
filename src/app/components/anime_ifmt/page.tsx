@@ -52,17 +52,23 @@ function animate(time: number) {
     const x = col * frameWidth;
     const y = row * frameHeight;
 
+    const scale = 2; // aumenta 2x
+
+    canvas.width = frameWidth * scale;
+    canvas.height = frameHeight * scale;
+
     ctx.drawImage(
       image,
-      x,
-      y,
+      col * frameWidth,
+      row * frameHeight,
       frameWidth,
       frameHeight,
       0,
       0,
-      frameWidth,
-      frameHeight
+      frameWidth * scale,
+      frameHeight * scale
     );
+
 
     frame++;
     lastTime = time;

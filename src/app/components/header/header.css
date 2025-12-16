@@ -38,11 +38,18 @@
 
 .menu ul {
   display: flex;
-  gap: 3rem; /* aumenta o espaço entre os itens */
+  flex-wrap: nowrap;
+  gap: clamp(0.5rem, 2vw, 2rem); /* espaço se adapta */
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
+.menu li {
+  font-size: clamp(0.75rem, 2.2vw, 1rem);
+  white-space: nowrap; /* impede quebra do texto */
+}
+
 
 .menu a {
   text-decoration: none;

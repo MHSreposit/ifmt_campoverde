@@ -16,18 +16,38 @@ export const metadata: Metadata = {
   },
 
 }
+//Importando as fonts nativas do next
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'], // normal, semi-bold, bold
+});
 
 export default function Home(){
   return (
     <div> {/* ATENÇÃO - NÃO DEIXAR ULTIMA LINHA DA SPRITE INCOMPLETA */}
-      <h3>Home Page - IFMT</h3>
-        <SpriteAnimIfmt
+      <div className="ao_lado">
+      <div className="col-texto">
+      <main className={poppins.className}>
+        <h1 style={{ fontSize: '4rem', fontWeight: 700 }}>Pesquisa e inovação em TI</h1>
+        <p style={{ fontSize: '1.25rem', fontWeight: 400 }}>
+          Contribuímos para o bem das pessoas com tecnologia e inovação.
+        </p>
+      </main>
+      </div>
+    <div className="col-image">
+      <SpriteAnimIfmt
         src="/sprites/ifmt.png"
-        frameWidth={209}
-        frameHeight={210}
-        totalFrames={213}
-        fps={24}
+        frameWidth={300}
+        frameHeight={300}
+        totalFrames={216}
+        fps={18}
       />
+      </div>
+      </div>
+
+
       {/* <Carrossel />  Só aparece aqui */}
     </div>
   )

@@ -1,10 +1,12 @@
-﻿.footer {
+﻿/* ===== Estrutura geral do footer (cores, espaçamento e tipografia base) ===== */
+.footer {
   background-color: #1c201c;
   color: #ffffff;
   padding: 30px 40px 20px;
   font-size: 14px;
 }
 
+/* ===== Grid principal do footer: 3 colunas no desktop ===== */
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,6 +15,7 @@
   margin: 0 auto;
 }
 
+/* ===== Títulos das colunas ===== */
 .footer-col h4 {
   font-size: 14px;
   font-weight: 700;
@@ -21,13 +24,14 @@
   letter-spacing: 0.5px;
 }
 
+/* ===== Textos e parágrafos das colunas ===== */
 .footer-col p {
   margin: 6px 0;
   color: #d1d1d1;
   line-height: 1.6;
 }
 
-/* Linha inferior (bem Bridge) */
+/* ===== Linha inferior do footer (copyright / assinatura) ===== */
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   margin-top: 40px;
@@ -37,7 +41,7 @@
   color: #aaa;
 }
 
-/* Responsivo */
+/* ===== Ajuste responsivo: footer em coluna única no mobile ===== */
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
@@ -45,6 +49,7 @@
   }
 }
 
+/* ===== Item do footer com ícone + texto (layout flex) ===== */
 .footer-item {
   padding-bottom: 20px;
   display: flex;
@@ -53,13 +58,31 @@
   margin-bottom: 12px;
 }
 
+/* ===== Ícones pequenos usados junto a textos ===== */
 .footer-item img {
   width: 20px;
   height: 20px;
   margin-top: 3px;
   flex-shrink: 0;
 
-  /* 🔵 deixa o ícone azul */
-  filter: invert(67%) sepia(92%) saturate(1200%) hue-rotate(95deg) brightness(115%) contrast(100%);
+  filter: invert(67%) sepia(92%) saturate(1200%)
+          hue-rotate(95deg) brightness(115%) contrast(100%);
 }
 
+/* ===== Container dos ícones grandes (redes sociais), alinhados à direita ===== */
+.footer-image {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* ===== Ícones grandes (brancos) das redes sociais ===== */
+.footer-image img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  filter: brightness(0) invert(1);
+}
