@@ -69,7 +69,7 @@ export function Footer() {
               alt="Github"
               />
               <img
-              src="/icons/instagran.png"
+              src="/icons/instagram.png"
               alt="Github"
               /> 
               <img

@@ -52,7 +52,7 @@ function animate(time: number) {
     const x = col * frameWidth;
     const y = row * frameHeight;
 
-    const scale = 2; // aumenta 2x
+    const scale = 1; // aumenta 2x
 
     canvas.width = frameWidth * scale;
     canvas.height = frameHeight * scale;
